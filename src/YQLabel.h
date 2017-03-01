@@ -90,6 +90,20 @@ public:
      * Reimplemented from YWidget.
      **/
     virtual void setSize( int newWidth, int newHeight );
+
+    /**
+     * Set the new font color of the widget.
+     *
+     * Reimplemented from YWidget.
+     **/
+    virtual void setColor( YColor newColor );
+
+    /**
+     * Set the new background color of the widget.
+     *
+     * Reimplemented from YWidget.
+     **/
+    virtual void setBackgroundColor( YColor newBackgroundColor );
 };
 
 

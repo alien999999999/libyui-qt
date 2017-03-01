@@ -110,5 +110,21 @@ void YQLabel::setSize( int newWidth, int newHeight )
     resize( newWidth, newHeight );
 }
 
+void YQLabel::setColor( YColor newColor )
+{
+    YLabel::setColor(newColor);
+    if (newColor == YCOLOR_NONE)
+        return ;
+    QLabel::setStyleSheet("color: " + YColorToString(newColor) + ";");
+}
+
+void YQLabel::setBackgroundColor( YColor newBackgroundColor )
+{
+    YLabel::setBackgroundColor(newBackgroundColor);
+    if (newBackgroundColor == YCOLOR_NONE)
+        return ;
+    QLabel::setStyleSheet("background-color: " YColorToString(newBackgroundColor) + ";");
+}
+
 
 #include "YQLabel.moc"
